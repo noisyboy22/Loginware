@@ -1,2 +1,4 @@
 # Loginware_Internship
-## abc
+This is the files of the embeded systems 
+- Aurdino
+- Rasberry Pi
