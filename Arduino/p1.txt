@@ -1,0 +1,59 @@
+int R=16;
+int G=5;
+int B=4;
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(R,OUTPUT);
+  pinMode(G,OUTPUT);
+  pinMode(B,OUTPUT);
+ 
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+   for(int i=0;i<5;i++)
+  {
+   Serial
+   digitalWrite(R,0);
+   digitalWrite(G,1);
+   digitalWrite(B,1);
+   delay(100);
+   digitalWrite(R,1);
+   digitalWrite(G,0);
+  digitalWrite(B,1);
+  delay(100);
+  digitalWrite(R,1);
+  digitalWrite(G,1);
+  digitalWrite(B,0);
+  delay(100);
+  }
+ /* for(int i=0;i<5;i++)
+  {
+    digitalWrite(R,0);
+    digitalWrite(G,1);
+    digitalWrite(B,1);
+    delay(1000);
+    digitalWrite(R,1);
+    digitalWrite(G,1);
+    digitalWrite(B,1);
+    delay(1000);
+  }*/
+//  for(;;);
+//  digitalWrite(R,0);
+//  digitalWrite(G,1);
+//  digitalWrite(B,1);
+//  delay(100);
+//  digitalWrite(R,1);
+//  digitalWrite(G,0);
+//  digitalWrite(B,1);
+//  delay(100);
+//  digitalWrite(R,1);
+//  digitalWrite(G,1);
+//  digitalWrite(B,0);
+//  delay(100);
+  //digitalWrite(R,1);
+  //digitalWrite(G,1);
+  //digitalWrite(B,1);
+  //delay(1000);
+}

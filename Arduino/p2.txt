@@ -1,0 +1,59 @@
+int R=16;
+int G=5;
+int B=4;
+int sw=0;
+int var;
+int c=0;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(sw,INPUT_PULLUP);
+  pinMode(R,OUTPUT);
+  pinMode(G,OUTPUT);
+  pinMode(B,OUTPUT);
+
+
+}
+
+void loop()
+{
+  var=digitalRead(sw);
+  Serial.print("Button value:");
+  Serial.println(var);
+  delay(200);
+ 
+  if(var==0&&c==0)
+  {
+    digitalWrite(R,0);
+    digitalWrite(G,1);
+    digitalWrite(B,1);
+    c++;
+    //delay(1000);
+  }
+  else if(var==0&&c==1)
+  {
+    digitalWrite(R,1);
+    digitalWrite(G,0);
+    digitalWrite(B,1);
+    c++;
+    //delay(1000);
+  }
+  else if(var==0&&c==2)
+  {
+    digitalWrite(R,1);
+    digitalWrite(G,1);
+    digitalWrite(B,0);
+    c++;
+    //delay(1000);
+  }
+  else if(var==0&&c==3)
+  {
+    digitalWrite(R,1);
+    digitalWrite(G,1);
+    digitalWrite(B,1);
+    c=0;
+    //delay(1000);
+    
+  }
+  
+}

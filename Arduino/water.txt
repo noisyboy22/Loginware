@@ -1,0 +1,31 @@
+int w=5;
+int led=4;
+int led2=0;
+int var;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(w,INPUT_PULLUP);
+  pinMode(led,OUTPUT);
+    pinMode(led2,OUTPUT);
+
+}
+
+void loop()
+{
+  var=digitalRead(w);
+  Serial.print("Value is");
+  Serial.println(var);
+  if(var==1)
+  {
+    digitalWrite(led,0);
+    digitalWrite(led2,1);
+
+  }
+  else
+  {
+    digitalWrite(led,1);
+    digitalWrite(led2,0);
+
+  }
+}

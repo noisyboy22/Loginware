@@ -1,0 +1,40 @@
+int ir=5;
+int led=4;
+int led2=0;
+int val=0;
+int c=0;
+int state=0;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(ir,INPUT_PULLUP);
+  pinMode(led,OUTPUT);
+    pinMode(led2,OUTPUT);
+
+}
+
+void loop()
+{
+  val=digitalRead(ir);
+  if(val==0&&state==0)
+  {
+    digitalWrite(led,1);
+    digitalWrite(led2,0);
+    c++;
+    state=1;
+    Serial.print("Count is :");
+    Serial.println(c);
+    
+  }
+  else if(val==0&&state==1)
+  {
+    digitalWrite(led,1);
+    digitalWrite(led2,0);
+  }
+  else
+  {
+   digitalWrite(led,0);
+    digitalWrite(led2,1);
+    state=0;
+  }
+}
